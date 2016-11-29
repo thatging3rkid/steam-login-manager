@@ -45,8 +45,9 @@ public class SteamLoginProcess {
 		} else if (os.contains("nix") || os.contains("nux")) {
 			os = "linux";
 		} else {
-			System.err.println("You seem to have an odd OS (not Windows, Mac or Linux) or an error has occured. Please raise an issue and include the following line: ");
+			System.err.println("OS not recognized. Please raise an issue and include the following line: ");
 			System.err.println(System.getProperty("os.name"));
+			System.exit(1);
 		}
 		
 		System.out.println(os);
